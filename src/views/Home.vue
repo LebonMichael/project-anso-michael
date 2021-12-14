@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="row row-cols-lg-4">
+    <Land v-for="x in countries" :key="x" :country="x"> </Land>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Land from "@/components/Land.vue";
+import LandService from "../services/LandService";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Land,
+  },
+  data() {
+    return {
+      countries: null,
+    };
+  },
+  created() {
+    LandService.getCountries()
+      .then((response) => {
+        this.countries = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
