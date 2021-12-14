@@ -20,6 +20,7 @@
           <div class="card-body">
             <p>Population: {{ country[0].population }}</p>
             <p>Continents: {{ country[0].continents[0] }}</p>
+            <p>Oppervlakte: {{ country[0].area}} Km²</p>
             <p>{{ country[0].timezones[0] }}</p>
             <p></p>
             <iframe
