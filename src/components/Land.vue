@@ -1,6 +1,9 @@
 <template>
-  <div class="my-3 ">
-    <div class="card bg-light shadow-lg border-1" style="width: 18rem; height: auto">
+  <div class="my-3 d-flex justify-content-center">
+    <div
+      class="card bg-light shadow-lg border-1"
+      style="width: 18rem; height: auto"
+    >
       <div class="mt-2">
         <img
           :src="country.flags.png"

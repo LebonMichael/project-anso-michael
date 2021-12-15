@@ -1,4 +1,5 @@
 <template>
+  <h1>Landen</h1>
   <div class="row row-cols-lg-4">
     <Land v-for="x in countries" :key="x" :country="x"> </Land>
   </div>
